@@ -1,0 +1,63 @@
+#######################
+# Italy
+
+## GK / Goalkeepers
+
+Buffon|Gianluigi Buffon,   28 Jan 1978
+Sirigu|Salvatore Sirigu,   12 Jan 1987
+Marchetti|Federico Marchetti,   7 Feb 1983
+Mattia Perin, 10 Nov 1992   ## Italy Genoa
+
+Marco Storari, 7 Jan 1977
+
+
+## DF / Defenders
+
+("DF, ""Christian Maggio",  "11 Feb 1982", ""),
+("DF, ""Giorgio Chiellini", "14 Aug 1984", ""),
+("DF, ""Davide Astori",     "7 Jan 1987",  ""),
+("DF, ""Mattia De Sciglio", "20 Oct 1992", ""),
+("DF, ""Andrea Barzagli",   "8 May 1981",  ""),
+("DF, ""Leonardo Bonucci",  "1 May 1987",  ""),
+("DF, ""Ignazio Abate",     "12 Nov 1986", ""),
+("DF, ""Andrea Ranocchia",  "16 Feb 1988", "Inter"),
+("DF, ""Manuel Pasqual",    "13 Mar 1982", "Fiorentina"),
+("DF, ""Gabriel Paletta",   "15 Feb 1986", "Parma"),
+("DF, ""Matteo Darmian",    "2 Dec 1989",  "Torino"),
+("DF, ""Angelo Ogbonna",    "25 May 1988", ""),
+
+## MF / Midfielders
+
+("MF", "Antonio Candreva",     "28 Feb 1987", ""),
+("MF", "Alberto Aquilani",     "7 Jul 1984",  ""),
+("MF", "Claudio Marchisio",    "19 Jan 1986", ""),
+("MF", "Daniele De Rossi",     "24 Jul 1983", ""),
+("MF", "Riccardo Montolivo",   "18 Jan 1985", ""),
+("MF", "Andrea Pirlo",         "19 May 1979", ""),
+("MF", "Emanuele Giaccherini", "5 May 1985",  ""),
+("MF", "Alessandro Diamanti",  "2 May 1983",  ""),
+("MF", "Thiago Motta",         "28 Aug 1982", ""),
+("MF", "Marco Verratti",       "5 Nov 1992",  ""),
+("MF", "Marco Parolo",         "25 Jan 1985", "Parma"),
+("MF", "Romulo",               "22 May 1987", "Verona"),
+
+("MF", "Simone Pepe",          "30 Aug 1983", ""),
+("MF", "Claudio Marchisio",    "19 Jan 1986", ""),
+("MF", "Simone Padoin",        "18 Mar 1984", ""),
+("MF", "Luca Marrone",         "28 Mar 1990", ""),
+
+
+## FW / Forwards
+
+("FW", "Mario Balotelli",     "12 Aug 1990",  ""),
+("FW", "Sebastian Giovinco",  "26 Jan 1987",  ""),
+("FW", "Alberto Gilardino",   "5 Jul 1982",   ""),
+("FW", "Stephan El Shaarawy", "27 Oct 1992",  ""),
+("FW", "Alessio Cerci",       "23 Jul 1987",  ""),
+("FW", "Antonio Cassano",     "12 July 1982", "Parma"),
+("FW", "Giuseppe Rossi",      "1 Feb 1987",   "Fiorentina"),
+("FW", "Mattia Destro",       "20 Mar 1991",  "Roma"),
+("FW", "Lorenzo Insigne",     "4 Jun 1991",   "Napoli"),
+("FW", "Ciro Immobile",       "20 Feb 1990",  "Torino"),
+("FW", "Fabio Borini",        "29 Mar 1991",  ""),
+
