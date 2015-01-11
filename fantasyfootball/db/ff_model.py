@@ -10,6 +10,10 @@ from peewee import (
 	ForeignKeyField,
 )
 
+from serializer import Serializer
+
+## Find a better way of doing this
+## see https://github.com/coleifer/flask-peewee/blob/master/flask_peewee/db.py
 DATABASE = 'fantasyfootball.db'
 
 database = SqliteDatabase(DATABASE)
@@ -17,6 +21,9 @@ database = SqliteDatabase(DATABASE)
 class BaseModel(Model):
 	class Meta:
 		database = database
+
+	def as_dict(self, fields=None, exclude=None):
+		return Serializer().serialize_object(self, fields, exclude)
 
 class User(BaseModel):
 	username = CharField(unique=True)
@@ -39,12 +46,14 @@ class FFTeam(BaseModel):
 		order_by = ('name',)
 
 class Season(BaseModel):
+	ext_id      = IntegerField()
 	name        = CharField()
 	year        = IntegerField()
 	league      = CharField(null=True)
 	last_update = DateTimeField(default=datetime.datetime.now)
 
 class Team(BaseModel):
+	ext_id     = IntegerField()
 	season     = ForeignKeyField(Season)
 	name       = CharField()
 	short_name = CharField(null=True)

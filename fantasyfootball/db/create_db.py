@@ -1,5 +1,9 @@
-from peewee import SqliteDatabase
+import sys
+sys.path.append("..")
 
+from lib.api_client.football_data_org import FootballDataOrgClient
+
+import ff_model
 from ff_model import (
 	User,
 	FFTeam,
@@ -8,10 +12,6 @@ from ff_model import (
 	Player,
 	PlayerTeam,
 )
-
-DATABASE = 'fantasyfootball.db'
-
-database = SqliteDatabase(DATABASE)
 
 USERS = [
 	#(username, name, password, email)
@@ -75,6 +75,8 @@ PLAYERS = [
 ]
 
 def create_db():
+	database = ff_model.database
+
 	database.connect()
 	database.create_tables([
 		User,
@@ -108,8 +110,35 @@ def populate():
 
 				t.save()
 
+	fdo = FootballDataOrgClient()
+
+	api_season = fdo.get_season("Serie A")
+
+	season = Season(
+		ext_id = api_season.get('id'),
+		name   = api_season.get('caption'),
+		year   = api_season.get('year'),
+		league = api_season.get('league'),
+	)
+
+	season.save()
+
+	api_teams = fdo.get_season_teams(season.ext_id).json()
+
+	for t in api_teams:
+		team = Team(
+			ext_id     = t.get('id'),
+			season     = season.id,
+			name       = t.get('name'),
+			short_name = t.get('shortName'),
+			crest_url  = t.get('crestUrl'),
+		)
+
+		team.save()
+
 	##Here load season and teams from API
 
 if __name__ == '__main__':
+
 	create_db()
 	populate()

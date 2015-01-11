@@ -9,8 +9,9 @@ from tornado.options import (
 
 from lib.fantasyfootball import FantasyFootballApp
 
+## eventually mix config and options
 define("port", default=8888, help="run on the given port", type=int)
-define("database", default="fantasyfootbal.db", help="blog database name")
+define("database", default="fantasyfootball.db", help="blog database name")
 define("template_path", default=os.path.join(os.path.dirname(__file__), "template"))
 define("static_path", default=os.path.join(os.path.dirname(__file__), "static"))
 

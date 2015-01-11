@@ -8,7 +8,10 @@ def do_get(base_url, path, params, headers):
 	return res
 
 class FootballDataOrgClient():
-	def __init__(self, cfg):
+	def __init__(self, cfg=None):
+		if not cfg:
+			cfg = {}
+
 		self.base_url = cfg.get("base_url", "http://www.football-data.org/")
 		self.headers  = cfg.get("headers", dict())
 
